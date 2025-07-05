@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="fontello/fontello.css">
+</head>
+
+<body>
+    <div class="lg:container mx-auto overflow-x-hidden">
+        <!-- header -->
+        <header>
+            <div class="flex px-8 py-4 relative h-20 *:h-full border">
+                <figure class="w-2/12 md:w-1/12 flex justify-center"><img class="h-full"
+                        src="style/image/logo-header.png" alt=""></figure>
+                <div class="w-7/12 md:w-4/12 lg:w-3/12">
+                    <h1 class="w-full h-full text-2xl flex justify-start items-center font-bold 2xl:text-4xl">Ultimate
+                        Blocks</h1>
+                </div>
+                <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                <ul class="hidden md:flex *:px-4 ml-auto items-center lg:ml-36 xl:ml-79 2xl:ml-[480px]">
+                    <li><a href="">Blocks</a></li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+                <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                <div onclick="resMenu()" class="toggle md:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- \\\\\\\\\\\\\\\\\ -->
+                <div
+                    class="menu backdrop-blur-xl fixed flex flex-wrap w-0 h-[120vh]  overflow-x-hidden justify-center right-0 top-20 *:w-full *:flex *:justify-center z-50 transition-all duration-700 ease-in-out">
+                    <h2 class="m-5">Blocks</h2>
+                    <a href="">Tablet of content</a>
+                    <a href="">Review</a>
+                    <a href="">How to schema</a>
+                    <a href="">Button improved</a>
+                    <a href="">Content toggle</a>
+                    <a href="">Tabbed content</a>
+                    <a href="">Content filter</a>
+                    <a href="">Styled list</a>
+                    <a href="">countdown</a>
+                    <a href="">progress bar</a>
+                    <h2>Support</h2>
+                    <a href="">Docs</a>
+                    <a href="">Open ticket</a>
+                    <a href="">Community</a>
+                    <h2 class="m-5">Blog</h2>
+                    <h2 class="m-5">Pricing</h2>
+                    <h2 class="m-5">login</h2>
+                    <div>
+                        <a class="btn">Get Started</a>
+                    </div>
+                </div>
+                <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                <div class="hidden lg:flex ml-auto">
+                    <a class="btn" href="">Get Started</a>
+                </div>
+                <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+            </div>
+        </header>
+        <!-- header -->
+        <!-- section 1 -->
+        <section>
+            <div class="py-10 px-5 *:p-3">
+                <h3 class="text-2xl font-medium">Accordion Design: Best Practices, Examples, and WordPress Guide</h3>
+                <figure><img src="style/image/title-img.png" alt=""></figure>
+                <p>Accordions are one of the most dynamic and versatile elements of modern website design. These
+                    collapsible sections help organize content in a way that’s clean, interactive, and mobile-friendly.
+                </p>
+                <p>Whether you want to tidy up FAQs, product descriptions, or feature breakdowns, accordions enhance the
+                    user experience by allowing visitors to expand and access detailed information without overwhelming
+                    the page.
+
+                </p>
+                <p>In this guide, we’ll not only explore the best real-world examples of accordion design but also share
+                    proven best practices and website design tips. Plus, we’ll show you how to easily create beautiful
+                    accordions in WordPress.
+
+                </p>
+                <h3 class="text-2xl font-medium">What Makes a Good Accordion Design?</h3>
+                <p>Before diving into examples, let’s understand what separates a “good” accordion from an average one.
+                </p>
+                <div class="flex flex-col *:font-medium">
+                    <label for=""><i class="icon-right-open"></i> Clear Labels</label>
+                    <label for=""><i class="icon-right-open"></i>Smooth Animations</label>
+                    <label for=""><i class="icon-right-open"></i>Proper Spacing and Readability:</label>
+                    <label for=""><i class="icon-right-open"></i>Intuitive Behavior</label>
+                    <label for=""><i class="icon-right-open"></i>Mobile-First Design</label>
+                    <label for=""><i class="icon-right-open"></i>SEO-Friendly Structure</label>
+                </div>
+            </div>
+        </section>
+        <!-- section 1 -->
+
+    </div>
+</body>
+<script>
+    const menu = document.querySelector('.menu');
+    const toggle = document.querySelector('.toggle');
+    const span = document.querySelectorAll('.toggle>span');
+    let flag = 1
+    function resMenu() {
+        if (flag % 2) {
+            menu.style.width = '100%'
+            span[1].style.transform = 'translatex(300px)'
+            span[0].style.transform = 'rotate(-50deg)'
+            span[2].style.transform = 'rotate(50deg)'
+        } else {
+            menu.style.width = '0px'
+            span[1].style.transform = 'translatex(0px)'
+            span[0].style.transform = 'rotate(0deg)'
+            span[2].style.transform = 'rotate(0deg)'
+
+        }
+        flag++
+    }
+
+</script>
+
+</html>
