@@ -311,35 +311,35 @@
                     <!-- //////////////////////////////accordion-menu//////////////////  -->
                     <ul class="acc">
                         <li>
-                            <h2 onclick="acc1(this)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What is an
+                            <h2 onclick="acc1(this,0)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What is an
                                 accordion in website design?</h2>
                             <p class="lg:text-xl xl:text-2xl">An accordion is a UI element that allows users to expand
                                 and collapse sections to reveal
                                 or hide content, keeping web pages organized and interactive.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What are
+                            <h2 onclick="acc1(this,1)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What are
                                 the benefits of using an accordion</h2>
                             <p class="lg:text-xl xl:text-2xl">Accordions simplify complex content, reduce page clutter,
                                 improve mobile usability, and
                                 enhance user engagement.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I add
+                            <h2 onclick="acc1(this,2)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I add
                                 accordions without a plugin in WordPress?</h2>
                             <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
                                 like Ultimate Blocks makes it
                                 much faster and easier, especially with customizations.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I add
+                            <h2 onclick="acc1(this,3)"class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I add
                                 accordions without a plugin in WordPress?</h2>
                             <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
                                 like Ultimate Blocks makes it
                                 much faster and easier, especially with customizations.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this)" class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What is
+                            <h2 onclick="acc1(this,4)" class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What is
                                 the best WordPress plugin for accordion design?</h2>
                             <p class="lg:text-xl xl:text-2xl">Ultimate Blocks is a powerful option—it’s simple,
                                 lightweight, highly customizable, and
@@ -378,14 +378,42 @@
 <script>
     const myP = document.querySelectorAll('.acc>li>p')
     for (let i = 0; i < myP.length; i++) {
-        let temp = myP[i].clientHeight;
+        ////////////
+        myP[i].setAttribute('data-status', 'off')
+        ////////////
+
+
+        let temp = myP[i].clientHeight
         myP[i].setAttribute('data-h', temp)
-        myP[i].style.height='0'
+        myP[i].style.height = '0'
     }
 
-    function acc1(s) {
-       let h = s.nextElementSibling.getAttribute('data-h')
-        s.nextElementSibling.style.height= h + 'px'
+
+
+    function acc1(s, num) {
+
+        //////////reset p/////////
+        for (let k = 0; k < myP.length; k++) {
+            if (k != num) {
+                myP[k].style.height = '0'
+                myP[k].setAttribute('data-status', 'off')
+            }
+        }
+        //////////reset p/////////
+
+
+        if (s.nextElementSibling.getAttribute('data-status') == 'off') {
+            // برای اضافه کردن یک کلاس به عنصر
+            let h = s.nextElementSibling.getAttribute('data-h')
+            s.nextElementSibling.style.height = h + 'px'
+               s.nextElementSibling.style.padding = '2px'
+            s.nextElementSibling.setAttribute('data-status', 'on')
+
+        } else {
+            s.nextElementSibling.style.height = '0'
+            s.nextElementSibling.setAttribute('data-status', 'off')
+        }
+
     }
 </script>
 

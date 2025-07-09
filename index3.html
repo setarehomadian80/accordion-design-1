@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/output.css">
+    <style>
+        .acc {
+            width: 600px;
+            margin: 0 auto;
+
+            >li {
+                width: 100%;
+
+                >h2 {
+                    border: 2px sollid black;
+                    width: 100%;
+                    height: 40px;
+                    background-color: khaki;
+                }
+
+                /* p {
+                 height: 0;
+                    overflow: hidden;
+                }    */
+            }
+        }
+
+        /* .toggleHeight {
+            height: auto !important;
+        } */
+    </style>
+</head>
+
+<body>
+    <ul class="acc">
+        <li>
+            <h2 onclick="acc1(this)">click</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliqus voluptatibus reiciendis adipisci vitae
+                quam voluptate aspernatur, voluptas qui neque.</p>
+        </li>
+        <li>
+            <h2 onclick="acc1(this)">click</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid odit dignissimos cum iure tenetur modi
+                enim sed temporibus, officia, omnis voluptatibus reiciendis adipisci vitae quam voluptate aspernatur,
+                voluptas qui neque.</p>
+        </li>
+        <li>
+            <h2 onclick="acc1(this)">click</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe vitae a et. Magni dicta aliquam
+                necessitatibus consectetur similique? Perspiciatis, accusamus quasi obcaecati pariatur consectetur
+                dolores aperiam dolorem quas deserunt nostrum! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aliquid odit dignissimos cum iure tenetur modi enim sed temporibus, officia, omnis voluptatibus
+                reiciendis adipisci vitae quam voluptate aspernatur, voluptas qui neque.</p>
+        </li>
+    </ul>
+</body>
+<script>
+    const myP = document.querySelectorAll('.acc>li>p')
+    for (let i = 0; i < myP.length; i++) {
+        ////////////
+        myP[i].setAttribute('data-status', 'off')
+        ////////////
+
+
+        let temp = myP[i].clientHeight
+        myP[i].setAttribute('data-h', temp)
+        myP[i].style.height = '0'
+    }
+
+
+
+    function acc1(s) {
+        if (s.nextElementSibling.getAttribute('data-status') == 'off') {
+            // برای اضافه کردن یک کلاس به عنصر
+            let h = s.nextElementSibling.getAttribute('data-h')
+            s.nextElementSibling.style.height = h + 'px'
+            s.nextElementSibling.setAttribute('data-status', 'on')
+
+        } else {
+            s.nextElementSibling.style.height ='0'
+            s.nextElementSibling.setAttribute('data-status', 'off')
+        }
+
+    }
+</script>
+
+</html>
