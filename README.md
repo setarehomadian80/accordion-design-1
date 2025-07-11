@@ -35,7 +35,7 @@ This is a **responsive accordion menu** built with **HTML**, **Tailwind CSS**, a
 ## 🔗 Live Demo
 
 You can see the project live here:  
-👉 [Click to View Demo](https://setarehomadian80.github.io/web24-Gameweb/)
+👉 [Click to View Demo]( https://setarehomadian80.github.io/accordion-design-1/)
 
 ## 📬 Contact Me
 
