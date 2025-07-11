@@ -311,39 +311,49 @@
                     <!-- //////////////////////////////accordion-menu//////////////////  -->
                     <ul class="acc">
                         <li>
-                            <h2 onclick="acc1(this,0)" class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What is
+                            <h2 onclick="acc1(this,0)" class="relative font-medium text-sm md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl ">What is
                                 an
-                                accordion in website design?</h2>
+                                accordion in website design? <div class="icon-toggle absolute w-15 h-full right-0 text-center">
+                                    <i class="icon-plus block"></i>
+                                    <i class="icon-minus hidden"></i></div></h2>
                             <p class="lg:text-xl xl:text-2xl">An accordion is a UI element that allows users to expand
                                 and collapse sections to reveal
                                 or hide content, keeping web pages organized and interactive.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this,1)" class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What are
-                                the benefits of using an accordion</h2>
+                            <h2 onclick="acc1(this,1)" class="relative font-medium  text-sm md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl">What are
+                                the benefits of using an accordion <div class="icon-toggle absolute  w-15 h-full right-0 text-center">
+                                    <i class="icon-plus block"></i>
+                                    <i class="icon-minus hidden"></i></div></h2>
                             <p class="lg:text-xl xl:text-2xl">Accordions simplify complex content, reduce page clutter,
                                 improve mobile usability, and
                                 enhance user engagement.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this,2)" class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I
+                            <h2 onclick="acc1(this,2)" class="relative font-medium  text-sm md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I
                                 add
-                                accordions without a plugin in WordPress?</h2>
+                                accordions without a plugin in WordPress? <div class="icon-toggle absolute  w-15 h-full right-0 text-center">
+                                    <i class="icon-plus block"></i>
+                                    <i class="icon-minus hidden"></i></div></h2>
+                            <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
+                                like Ultimate Blocks makes it
+                                much faster and easier, especially with customizations.</p>
+                        </li>
+                        <li> 
+                            <h2 onclick="acc1(this,3)" class="relative font-medium  text-sm md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I
+                                add
+                                accordions without a plugin in WordPress? <div class="icon-toggle absolute w-15 h-full right-0 text-center">
+                                    <i class="icon-plus  block"></i>
+                                    <i class="icon-minus hidden"></i></div></h2>
                             <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
                                 like Ultimate Blocks makes it
                                 much faster and easier, especially with customizations.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this,3)" class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">Can I
-                                add
-                                accordions without a plugin in WordPress?</h2>
-                            <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
-                                like Ultimate Blocks makes it
-                                much faster and easier, especially with customizations.</p>
-                        </li>
-                        <li>
-                            <h2 onclick="acc1(this,4)" class="font-medium lg:text-2xl xl:text-3xl 2xl:text-4xl">What is
-                                the best WordPress plugin for accordion design?</h2>
+                            <h2 onclick="acc1(this,4)" class="relative font-medium text-sm md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl">What is
+                                the best WordPress plugin for accordionmenu design? <div class="icon-toggle absolute  w-15 h-full right-0 text-center">
+                                    <i class="icon-plus block"></i>
+                                    <i class="icon-minus hidden"></i></div></h2>
                             <p class="lg:text-xl xl:text-2xl">Ultimate Blocks is a powerful option—it’s simple,
                                 lightweight, highly customizable, and
                                 includes FAQ Schema support......</p>
@@ -627,19 +637,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
     const menu = document.querySelector('.menu');
     const toggle = document.querySelector('.toggle');
@@ -686,9 +683,25 @@
             if (k != num) {
                 myP[k].style.height = '0'
                 myP[k].setAttribute('data-status', 'off')
+
+
+
+                const iconDiv = myP[k].previousElementSibling.querySelector('.icon-toggle')
+                iconDiv.querySelector('.icon-plus').classList.remove('hidden')
+                 iconDiv.querySelector('.icon-plus').classList.add('block')
+                iconDiv.querySelector('.icon-minus').classList.add('hidden')
             }
         }
         //////////reset p/////////
+           const iconBox = s.querySelector('.icon-toggle')
+           const plusIcon = iconBox.querySelector('.icon-plus')
+           const minusIcon = iconBox.querySelector('.icon-minus')
+
+
+
+
+
+
 
 
         if (s.nextElementSibling.getAttribute('data-status') == 'off') {
@@ -696,11 +709,27 @@
             let h = s.nextElementSibling.getAttribute('data-h')
             s.nextElementSibling.style.height = h + 'px'
             s.nextElementSibling.setAttribute('data-status', 'on')
+            // تغییر ایکون
+               plusIcon.classList.add('hidden')
+               plusIcon.classList.remove('block')
+               minusIcon.classList.remove('hidden')
+               minusIcon.classList.add('block')
 
         } else {
             s.nextElementSibling.style.height = '0'
             s.nextElementSibling.setAttribute('data-status', 'off')
+
+               plusIcon.classList.remove('hidden')
+               plusIcon.classList.add('block')
+               minusIcon.classList.add('hidden')
+               minusIcon.classList.remove('block')
         }
+
+    }
+</script>
+
+<script>
+    function change(){
 
     }
 </script>
