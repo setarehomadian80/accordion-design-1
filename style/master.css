@@ -29,6 +29,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 5px;
     }
 
     .acc {
@@ -52,12 +53,22 @@
                 align-items: center;
             }
 
-           >p {    
+            >p {
                 overflow: hidden;
                 transition: 1s;
             }
         }
     }
- 
 
+    .bg-pink {
+        background-color: #fbedf0;
+    }
+
+    .bg-footer {
+        background-color: #ffe6c8;
+    }
+
+    .text-color {
+        border-color: #e11b4c;
+    }
 }
