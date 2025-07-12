@@ -2,6 +2,12 @@
 
 
 @layer base {
+
+    .menu.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .toggle {
         width: 40px;
         height: 30px;

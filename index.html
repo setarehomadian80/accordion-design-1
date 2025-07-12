@@ -64,7 +64,7 @@
                 </div>
                 <!-- \\\\\\\\\\\\\\\\\ -->
                 <div
-                    class="menu opacity-100 backdrop-blur-sm bg-white/95 fixed flex flex-wrap w-screen h-[120vh] overflow-x-hidden justify-center right-[-100%] top-20 *:w-full *:flex *:justify-center z-50 transition-all duration-700 ease-in-out">
+                    class="menu opacity-0 invisible backdrop-blur-sm bg-white/95 fixed flex flex-wrap w-screen h-[120vh] overflow-x-hidden justify-center top-20 left-0 *:w-full *:flex *:justify-center z-50 transition-all duration-700 ease-in-out">
                     <h2 class="m-5">Blocks</h2>
                     <a href="">Tablet of content</a>
                     <a href="">Review</a>
@@ -691,12 +691,14 @@
     let flag = 1
     function resMenu() {
         if (flag % 2) {
-            menu.style.right = '0'
+            menu.classList.remove('opacity-0', 'invisible');
+            menu.classList.add('opacity-100', 'visible');
             span[1].style.transform = 'translatex(300px)'
             span[0].style.transform = 'rotate(-50deg)'
             span[2].style.transform = 'rotate(50deg)'
         } else {
-            menu.style.right = '-100%'
+            menu.classList.remove('opacity-100', 'visible');
+            menu.classList.add('opacity-0', 'invisible');
             span[1].style.transform = 'translatex(0px)'
             span[0].style.transform = 'rotate(0deg)'
             span[2].style.transform = 'rotate(0deg)'
@@ -795,14 +797,14 @@
                 isEmpty = true
             }
         }))
-        if (isEmpty){
+        if (isEmpty) {
             alert("these boxes are empty")
-        }else{
+        } else {
             alert("successful")
             pop.style.display = 'none'
         }
 
-       
+
 
     })
     box.addEventListener('click', (e) => {
