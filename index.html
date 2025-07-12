@@ -10,6 +10,34 @@
 </head>
 
 <body>
+    <div class="pop  transition-opacity fixed w-screen h-screen left-0 bg-pop z-50 move">
+        <div class="box opacity-100 border box-syze w-[95%] h-[80%] md:w-[450px] md:h-[500px] p-3 ">
+            <h1 class="border flex justify-center h-12 items-center text-2xl text-white bg-blue-500">welcome</h1>
+            <div class="flex flex-wrap *:w-full *:my-5 mt-10">
+                <input class="inp border-b" placeholder="email address *" type="text">
+                <input class="inp border-b" placeholder="Password*" type="password">
+            </div>
+            <div class="flex *:mt-10 justify-between">
+                <div class="flex ">
+                    <input type="checkbox">
+                    <label class="px-1" for="">Stay Logged in</label>
+
+                </div>
+                <strong class="font-light">Forgot your password?</strong>
+            </div>
+            <div class="w-full">
+                <a class="enter bg-blue-500 w-[80%] flex mx-auto justify-center mt-15 cursor-pointer py-1 text-white">Sign
+                    in</a>
+            </div>
+            <p class=" mt-4 w-full text-center text-gray-400">If you have additional products purchased through
+                Freemius, click here to access your entire account with
+                the same email and password.</p>
+        </div>
+    </div>
+
+
+
+
     <div class="lg:container mx-auto overflow-x-hidden">
         <!-- header -->
         <header>
@@ -36,7 +64,7 @@
                 </div>
                 <!-- \\\\\\\\\\\\\\\\\ -->
                 <div
-                    class="menu backdrop-blur-sm bg-white/95 fixed flex flex-wrap w-screen h-[120vh] overflow-x-hidden justify-center right-[-100%] top-20 *:w-full *:flex *:justify-center z-50 transition-all duration-700 ease-in-out">
+                    class="menu opacity-100 backdrop-blur-sm bg-white/95 fixed flex flex-wrap w-screen h-[120vh] overflow-x-hidden justify-center right-[-100%] top-20 *:w-full *:flex *:justify-center z-50 transition-all duration-700 ease-in-out">
                     <h2 class="m-5">Blocks</h2>
                     <a href="">Tablet of content</a>
                     <a href="">Review</a>
@@ -311,49 +339,69 @@
                     <!-- //////////////////////////////accordion-menu//////////////////  -->
                     <ul class="acc">
                         <li>
-                            <h2 onclick="acc1(this,0)" class="relative font-medium text-sm md:text-lg lg:text-2xl ">What is
+                            <h2 onclick="acc1(this,0)" class="relative font-medium text-sm md:text-lg lg:text-2xl ">What
+                                is
                                 an
-                                accordion in website design? <div class="icon-toggle absolute w-15 h-full right-0 text-center">
+                                accordion in website design? <div
+                                    class="icon-toggle absolute w-15 h-full right-0 text-center">
                                     <i class="icon-plus block"></i>
-                                    <i class="icon-minus hidden"></i></div></h2>
+                                    <i class="icon-minus hidden"></i>
+                                </div>
+                            </h2>
                             <p class="lg:text-xl xl:text-2xl">An accordion is a UI element that allows users to expand
                                 and collapse sections to reveal
                                 or hide content, keeping web pages organized and interactive.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this,1)" class="relative font-medium  text-sm md:text-lg lg:text-2xl ">What are
-                                the benefits of using an accordion <div class="icon-toggle absolute  w-15 h-full right-0 text-center">
+                            <h2 onclick="acc1(this,1)" class="relative font-medium  text-sm md:text-lg lg:text-2xl ">
+                                What are
+                                the benefits of using an accordion <div
+                                    class="icon-toggle absolute  w-15 h-full right-0 text-center">
                                     <i class="icon-plus block"></i>
-                                    <i class="icon-minus hidden"></i></div></h2>
+                                    <i class="icon-minus hidden"></i>
+                                </div>
+                            </h2>
                             <p class="lg:text-xl xl:text-2xl">Accordions simplify complex content, reduce page clutter,
                                 improve mobile usability, and
                                 enhance user engagement.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this,2)" class="relative font-medium  text-sm md:text-lg lg:text-2xl ">Can I
+                            <h2 onclick="acc1(this,2)" class="relative font-medium  text-sm md:text-lg lg:text-2xl ">Can
+                                I
                                 add
-                                accordions without a plugin in WordPress? <div class="icon-toggle absolute  w-15 h-full right-0 text-center">
+                                accordions without a plugin in WordPress? <div
+                                    class="icon-toggle absolute  w-15 h-full right-0 text-center">
                                     <i class="icon-plus block"></i>
-                                    <i class="icon-minus hidden"></i></div></h2>
-                            <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
-                                like Ultimate Blocks makes it
-                                much faster and easier, especially with customizations.</p>
-                        </li>
-                        <li> 
-                            <h2 onclick="acc1(this,3)" class="relative font-medium  text-sm md:text-lg lg:text-2xl ">Can I
-                                add
-                                accordions without a plugin in WordPress? <div class="icon-toggle absolute w-15 h-full right-0 text-center">
-                                    <i class="icon-plus  block"></i>
-                                    <i class="icon-minus hidden"></i></div></h2>
+                                    <i class="icon-minus hidden"></i>
+                                </div>
+                            </h2>
                             <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
                                 like Ultimate Blocks makes it
                                 much faster and easier, especially with customizations.</p>
                         </li>
                         <li>
-                            <h2 onclick="acc1(this,4)" class="relative font-medium text-sm md:text-lg lg:text-2xl ">What is
-                                the best WordPress plugin for accordionmenu design? <div class="icon-toggle absolute  w-15 h-full right-0 text-center">
+                            <h2 onclick="acc1(this,3)" class="relative font-medium  text-sm md:text-lg lg:text-2xl ">Can
+                                I
+                                add
+                                accordions without a plugin in WordPress? <div
+                                    class="icon-toggle absolute w-15 h-full right-0 text-center">
+                                    <i class="icon-plus  block"></i>
+                                    <i class="icon-minus hidden"></i>
+                                </div>
+                            </h2>
+                            <p class="lg:text-xl xl:text-2xl">Yes, using the default Details block. But using a plugin
+                                like Ultimate Blocks makes it
+                                much faster and easier, especially with customizations.</p>
+                        </li>
+                        <li>
+                            <h2 onclick="acc1(this,4)" class="relative font-medium text-sm md:text-lg lg:text-2xl ">What
+                                is
+                                the best WordPress plugin for accordionmenu design? <div
+                                    class="icon-toggle absolute  w-15 h-full right-0 text-center">
                                     <i class="icon-plus block"></i>
-                                    <i class="icon-minus hidden"></i></div></h2>
+                                    <i class="icon-minus hidden"></i>
+                                </div>
+                            </h2>
                             <p class="lg:text-xl xl:text-2xl">Ultimate Blocks is a powerful option—it’s simple,
                                 lightweight, highly customizable, and
                                 includes FAQ Schema support......</p>
@@ -394,8 +442,7 @@
                         </div>
                     </div>
                     <!-- //////////////////////icon///////////////////// -->
-                    <div
-                        class="w-full mt-10 flex justify-center *:border *:px-5 *:py-3 *:mx-1 lg:*:text-3xl xl:*:text-4xl 2xl:*:text-5xl *:text-blue-500 
+                    <div class="w-full mt-10 flex justify-center *:border *:px-5 *:py-3 *:mx-1 lg:*:text-3xl xl:*:text-4xl 2xl:*:text-5xl *:text-blue-500 
                         *:hover:bg-blue-500 *:hover:text-white *:transition-all *:duration-400 ease-in-out ">
                         <a href=""><i class="icon-twitter"></i></a>
                         <a href=""><i class="icon-facebook"></i></a>
@@ -573,8 +620,8 @@
                     <footer>
                         <div class="bg-footer w-full mt-20 lg:">
                             <div class="md:flex">
-                                <figure class="w-full p-5 md:w-1/2"><img class="w-1/5" src="style/image/Ultimate-Blocks-Icon.png"
-                                        alt=""></figure>
+                                <figure class="w-full p-5 md:w-1/2"><img class="w-1/5"
+                                        src="style/image/Ultimate-Blocks-Icon.png" alt=""></figure>
                                 <div class="md:w-1/2">
                                     <div class="p-5">
                                         <strong>One plugin to replace them all.</strong>
@@ -615,10 +662,12 @@
                             </div>
                             <div class="flex justify-center gap-1 border-b-2 border-b-gray-300 px-1 py-10  mx-5">
                                 <input class="w-2/4 h-10 border bg-white rounded-md" type="text">
-                                <a class="btn w-1/4 lg:w-1/7 hover:opacity-60 transition-all duration-300 ease-in-out" href="">Search</a>
+                                <a class="btn w-1/4 lg:w-1/7 hover:opacity-60 transition-all duration-300 ease-in-out"
+                                    href="">Search</a>
                             </div>
                             <div class="w-full py-5 flex justify-center"><a
-                                    class="px-5 py-3 bg-blue-600 rounded-4xl hover:opacity-80 transition-all duration-300 ease-in-out" href="">Join Our Facebook Community</a>
+                                    class="px-5 py-3 bg-blue-600 rounded-4xl hover:opacity-80 transition-all duration-300 ease-in-out"
+                                    href="">Join Our Facebook Community</a>
                             </div>
                             <div class="*:p-2 *:w-full text-center">
                                 <p>Made with ❤️ in Brooklyn, Istanbul, Dhaka & Chittagong.</p>
@@ -633,8 +682,6 @@
 
     </div>
 </body>
-
-
 
 
 <script>
@@ -657,7 +704,7 @@
         }
         flag++
     }
-    
+
 
 </script>
 
@@ -688,14 +735,14 @@
 
                 const iconDiv = myP[k].previousElementSibling.querySelector('.icon-toggle')
                 iconDiv.querySelector('.icon-plus').classList.remove('hidden')
-                 iconDiv.querySelector('.icon-plus').classList.add('block')
+                iconDiv.querySelector('.icon-plus').classList.add('block')
                 iconDiv.querySelector('.icon-minus').classList.add('hidden')
             }
         }
         //////////reset p/////////
-           const iconBox = s.querySelector('.icon-toggle')
-           const plusIcon = iconBox.querySelector('.icon-plus')
-           const minusIcon = iconBox.querySelector('.icon-minus')
+        const iconBox = s.querySelector('.icon-toggle')
+        const plusIcon = iconBox.querySelector('.icon-plus')
+        const minusIcon = iconBox.querySelector('.icon-minus')
 
 
 
@@ -710,28 +757,57 @@
             s.nextElementSibling.style.height = h + 'px'
             s.nextElementSibling.setAttribute('data-status', 'on')
             // تغییر ایکون
-               plusIcon.classList.add('hidden')
-               plusIcon.classList.remove('block')
-               minusIcon.classList.remove('hidden')
-               minusIcon.classList.add('block')
+            plusIcon.classList.add('hidden')
+            plusIcon.classList.remove('block')
+            minusIcon.classList.remove('hidden')
+            minusIcon.classList.add('block')
 
         } else {
             s.nextElementSibling.style.height = '0'
             s.nextElementSibling.setAttribute('data-status', 'off')
 
-               plusIcon.classList.remove('hidden')
-               plusIcon.classList.add('block')
-               minusIcon.classList.add('hidden')
-               minusIcon.classList.remove('block')
+            plusIcon.classList.remove('hidden')
+            plusIcon.classList.add('block')
+            minusIcon.classList.add('hidden')
+            minusIcon.classList.remove('block')
         }
 
     }
 </script>
 
 <script>
-    function change(){
+    const pop = document.querySelector('.pop')
+    const box = document.querySelector('.box')
+    const enter = document.querySelector('.enter')
+    const inp = document.querySelectorAll('.inp')
 
-    }
+    pop.addEventListener('click', (e) => {
+        pop.style.display = 'none'
+    })
+
+
+
+    enter.addEventListener('click', (e) => {
+        let isEmpty = false
+
+        inp.forEach((inp => {
+            if (inp.value.trim() === "") {
+                isEmpty = true
+            }
+        }))
+        if (isEmpty){
+            alert("these boxes are empty")
+        }else{
+            alert("successful")
+            pop.style.display = 'none'
+        }
+
+       
+
+    })
+    box.addEventListener('click', (e) => {
+        e.stopPropagation()
+    })
 </script>
 
 </html>

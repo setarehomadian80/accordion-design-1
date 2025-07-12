@@ -70,4 +70,27 @@
     .text-color {
         border-color: #e11b4c;
     }
+
+    .bg-pop {
+        /* inset: 0; */
+        background: rgba(255, 255, 255, 0.882);
+        /* سفید با شفافیت */
+        backdrop-filter: blur(20px);
+        /* افکت تارکننده */
+    }
+
+    .box-syze {
+        /* width: 450px;
+        height: 500px; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+    }
+
+    .move {
+        transition: 1s;
+    }
+
 }
